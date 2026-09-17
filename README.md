@@ -33,7 +33,7 @@ No household-level data are contained in this repository.
 ```r
 source("R/paper_results.R")
 res <- load_paper_results()                  # every result set the paper reads
-source("R/paper_fig01_measure_collapse.R")   # regenerates Figure 1; likewise fig02–fig05
+source("R/paper_fig01_measure_collapse.R")   # regenerates a figure; likewise fig02–fig05
 ```
 
 `load_paper_results()` also loads a few supplementary result sets (isogini curves, assumption
@@ -96,12 +96,12 @@ results/
 | Paper element | Script | Results |
 |---|---|---|
 | Replication of Bönke et al. (2017) | `01b_hfcs_w15_bonke_replication.R` | `bonke_replication/` |
-| Measure and return-assumption dependence (Figure 1) | `07_challenge_measure_battery.R` | `hfcs_w50_07_*`, `lws_07_*` |
+| Measure and return-assumption dependence | `07_challenge_measure_battery.R` | `hfcs_w50_07_*`, `lws_07_*` |
 | Gradient-schedule sensitivity | `09_challenge_gradient_sensitivity.R` | `*_09_schedule_sensitivity_summary.csv` |
 | Lorenz dominance | `archive/04_challenge_measure_robustness.R` | `hfcs_w50_04_dominance_summary.csv` |
-| Mechanical effect, critical correlation ρ* (Figure 5) | `10_challenge_rho_mech_simulation.R`, `paper_fig05_rho_threshold.R`, `15_…` (mean-shift split) | `rho_mech/`, `*_15_eqsplit_wolff.csv` |
+| Mechanical effect, critical correlation ρ* | `10_challenge_rho_mech_simulation.R`, `paper_fig05_rho_threshold.R`, `15_…` (mean-shift split) | `rho_mech/`, `*_15_eqsplit_wolff.csv` |
 | Equal-split and concentration counterfactuals | `15_challenge_equal_split_counterfactual.R`, `util_concentration_sweep.R` | `*_15_eqsplit_*`, `hfcs_w50_21_concentration_gradient.csv` |
-| Stratification (Figures 2–4) | `05f_challenge_stratification_consolidated.R` | `*_05f_strat_*` |
+| Stratification | `05f_challenge_stratification_consolidated.R` | `*_05f_strat_*` |
 | Temporal robustness | `12_challenge_temporal_x_measures.R` | `hfcs_multiwave/` |
 | Pension wealth · unit of analysis · survey coverage | `11_…`, `17_…`, `14_…` and `16_…` | `lws_11_verdicts.csv`, `macro/`, `hfcs_w50_14_*` |
 
