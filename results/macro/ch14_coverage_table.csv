@@ -1,0 +1,40 @@
+country,survey_year,status,survey_flow_bn,survey_flow_se,macro_flow_bn,macro_basis,macro_type,macro_match,macro_quality,currency,coverage,n_transfers,pct_undated,implied_households,caveat
+AT,2011,ok,8.82,2.195,8.7,2010-2020 interp,economic,log-linear,as_published,EUR,1.0167,127,0,3705248.193,
+AT,2014,ok,9.75,0.868,11.1,2010-2020 interp,economic,log-linear,as_published,EUR,0.8811,178,0,3814984.28329468,
+AT,2017,ok,7.59,0.849,14.1,2010-2020 interp,economic,log-linear,as_published,EUR,0.538,158,0,3901208.013,
+AT,2021,ok,18.11,1.079,18,2020,economic,nearest (-1 y),as_published,EUR,1.006,138,0,4049258.414,macro comparator not interpolated (nearest (-1 y)); coverage biased if the flow trends
+FR,2009,ok,21.62,NA,314.1,2020,economic,nearest (+11 y),as_published,EUR,0.0688,697,0.0178,27511586.3774762,macro comparator not interpolated (nearest (+11 y)); coverage biased if the flow trends
+FR,2014,ok,52.23,NA,314.1,2020,economic,nearest (+6 y),as_published,EUR,0.1663,1430,0.0303,28756756.0847692,macro comparator not interpolated (nearest (+6 y)); coverage biased if the flow trends
+FR,2017,ok,46.97,NA,314.1,2020,economic,nearest (+3 y),as_published,EUR,0.1496,1711,0.0409,29137065.1172039,macro comparator not interpolated (nearest (+3 y)); coverage biased if the flow trends
+FR,2020,ok,75.64,NA,314.1,2020,economic,nearest (+0 y),as_published,EUR,0.2408,1633,0.0415,30044673.395318,macro comparator not interpolated (nearest (+0 y)); coverage biased if the flow trends
+IT,1995,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,1998,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2000,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2002,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2004,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2006,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2008,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2010,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2012,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2014,ok,42.7,NA,227.2,2014,economic,exact,derived,EUR,0.188,392,0,24532975.4314575,"macro comparator derived (pct-of-national-income x NNI), not a published volume"
+IT,2016,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2020,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+IT,2022,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+UK,2007,ok,14.95,NA,73.9,2000-2010 interp,adjusted fiscal,log-linear,as_published,GBP,0.2024,3433,0.0104,23674894.4285855,fiscal comparator captures only the taxable slice; coverage overstated vs true flow
+UK,2009,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,24164399.0099148,
+UK,2011,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,23761961.7136501,
+UK,2013,ok,30.74,NA,99.7,2010-2020 interp,adjusted fiscal,log-linear,as_published,GBP,0.3084,1799,0.353,25083987.5483704,UK recall window truncated at 3yrs by survey design; delta>3 invalid; 35% of receipts undated; fiscal comparator captures only the taxable slice; coverage overstated vs true flow
+UK,2015,ok,36.43,NA,111.6,2010-2020 interp,adjusted fiscal,log-linear,as_published,GBP,0.3264,1881,0.3282,25489053.49701,UK recall window truncated at 3yrs by survey design; delta>3 invalid; 33% of receipts undated; fiscal comparator captures only the taxable slice; coverage overstated vs true flow
+UK,2017,ok,47.22,NA,124.9,2010-2020 interp,adjusted fiscal,log-linear,as_published,GBP,0.3779,2626,4e-4,25439008.8764076,UK recall window truncated at 3yrs by survey design; delta>3 invalid; fiscal comparator captures only the taxable slice; coverage overstated vs true flow
+UK,2019,ok,50.12,NA,139.9,2010-2020 interp,adjusted fiscal,log-linear,as_published,GBP,0.3583,2790,0,26022729.9303387,UK recall window truncated at 3yrs by survey design; delta>3 invalid; fiscal comparator captures only the taxable slice; coverage overstated vs true flow
+UK,2021,no transfer data (pia/piy absent),NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+US,1995,ok,262.81,18.33,551,1990-2000 interp,economic,log-linear,as_published,USD,0.477,334,0.0148,98028451.3475866,thin-tail volatility; report as range not point
+US,1998,ok,267.56,8.786,677.3,1990-2000 interp,economic,log-linear,as_published,USD,0.395,516,0.0152,100990025.259839,thin-tail volatility; report as range not point
+US,2001,ok,204.8,7.136,801.6,2000-2010 interp,economic,log-linear,as_published,USD,0.2555,387,0.0213,105168158.243982,thin-tail volatility; report as range not point
+US,2004,ok,104.02,1.481,879.2,2000-2010 interp,economic,log-linear,as_published,USD,0.1183,163,0.0141,110778265.399057,thin-tail volatility; report as range not point
+US,2007,ok,381.18,7.511,964.2,2000-2010 interp,economic,log-linear,as_published,USD,0.3953,475,0.0189,115135148.392121,thin-tail volatility; report as range not point
+US,2010,ok,247.34,7.242,1057.5,2010,economic,exact,as_published,USD,0.2339,331,0.0138,116326863.197745,thin-tail volatility; report as range not point
+US,2013,ok,594.2,12.495,1197.4,2010-2020 interp,economic,log-linear,as_published,USD,0.4962,634,0.0142,121339907.645004,thin-tail volatility; report as range not point
+US,2016,ok,836.74,9.202,1355.8,2010-2020 interp,economic,log-linear,as_published,USD,0.6172,423,0.013,124849073.372458,thin-tail volatility; report as range not point
+US,2019,ok,239.93,5.495,1535.1,2010-2020 interp,economic,log-linear,as_published,USD,0.1563,253,0.0178,127187650.012693,thin-tail volatility; report as range not point
+US,2022,ok,736.41,31.121,1600,2020,economic,nearest (-2 y),as_published,USD,0.4603,479,0.0137,130242993.865801,thin-tail volatility; report as range not point; macro comparator not interpolated (nearest (-2 y)); coverage biased if the flow trends

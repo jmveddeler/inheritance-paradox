@@ -1,0 +1,15 @@
+The aggregate results (results/**/*.csv, results/**/*.rds) and figures
+(results/figures/) in this repository are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0).
+
+Copyright (c) 2026 Jan-Marten Veddeler
+
+You are free to share and adapt this material for any purpose, provided you
+give appropriate credit, provide a link to the licence, and indicate if changes
+were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+The results are derived from the Eurosystem Household Finance and Consumption
+Survey (HFCS) and the Luxembourg Wealth Study (LWS). Use of the underlying
+microdata remains subject to the data producers' own conditions of access.

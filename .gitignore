@@ -1,0 +1,12 @@
+# Microdata never belongs in this repository (HFCS / LWS conditions of access).
+Data/
+*prepped*.rds
+*processed*.rds
+*_full.rds
+
+# Local R and editor state
+.Rhistory
+.RData
+.Rproj.user/
+*.log
+.DS_Store

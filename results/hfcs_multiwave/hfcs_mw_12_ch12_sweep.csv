@@ -1,0 +1,13 @@
+"scenario","measure","n_total","n_paradox","share"
+"baseline_3pct","atkinson05",85,80,0.941
+"gradient","atkinson05",85,42,0.494
+"baseline_3pct","atkinson1",85,73,0.859
+"gradient","atkinson1",85,33,0.388
+"baseline_3pct","atkinson2",85,40,0.471
+"gradient","atkinson2",85,5,0.059
+"baseline_3pct","cv",85,85,1
+"gradient","cv",85,83,0.976
+"baseline_3pct","ge_mld",85,73,0.859
+"gradient","ge_mld",85,33,0.388
+"baseline_3pct","gini",85,85,1
+"gradient","gini",85,85,1

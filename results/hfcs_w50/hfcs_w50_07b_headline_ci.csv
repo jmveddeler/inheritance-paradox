@@ -1,0 +1,11 @@
+"measure","n_countries","n_paradox_point","n_paradox_ci_robust","n_no_paradox_ci_robust","n_single_implicate"
+"atkinson05",18,9,3,2,0
+"atkinson1",18,8,3,6,0
+"atkinson2",18,1,1,2,0
+"cv",18,18,11,0,0
+"ge2",18,13,8,0,0
+"ge_mld",18,8,3,6,0
+"ge_theil",18,10,4,0,0
+"gini",18,18,15,0,0
+"top1",18,16,3,0,0
+"top10",18,18,9,0,0
