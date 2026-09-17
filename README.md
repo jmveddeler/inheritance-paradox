@@ -1,7 +1,7 @@
 # Is the inheritance paradox real?
 
-**Replication package** for *Is the inheritance paradox real? Inequality measure choice, mechanical
-effects and stratification* — Jan-Marten Veddeler, University of Antwerp. Working paper, 2026.
+**Code and aggregate results** for *Is the inheritance paradox real? Inequality measure choice,
+capitalisation assumptions and stratification* — Jan-Marten Veddeler, University of Antwerp. Working paper, 2026.
 
 The "inheritance paradox" is the finding that gifts and inheritances, although received
 disproportionately by wealthier households, *reduce* measured wealth inequality. This paper tests
@@ -33,7 +33,7 @@ No household-level data are contained in this repository.
 ```r
 source("R/paper_results.R")
 res <- load_paper_results()                  # every result set the paper reads
-source("R/paper_fig01_measure_collapse.R")   # regenerates Figure 1; likewise fig02–fig04
+source("R/paper_fig01_measure_collapse.R")   # regenerates Figure 1; likewise fig02–fig05
 ```
 
 `load_paper_results()` also loads a few supplementary result sets (isogini curves, assumption
@@ -99,7 +99,7 @@ results/
 | Measure and return-assumption dependence (Figure 1) | `07_challenge_measure_battery.R` | `hfcs_w50_07_*`, `lws_07_*` |
 | Gradient-schedule sensitivity | `09_challenge_gradient_sensitivity.R` | `*_09_schedule_sensitivity_summary.csv` |
 | Lorenz dominance | `archive/04_challenge_measure_robustness.R` | `hfcs_w50_04_dominance_summary.csv` |
-| Mechanical effect, critical correlation ρ* | `10_challenge_rho_mech_simulation.R` | `rho_mech/` |
+| Mechanical effect, critical correlation ρ* (Figure 5) | `10_challenge_rho_mech_simulation.R`, `paper_fig05_rho_threshold.R`, `15_…` (mean-shift split) | `rho_mech/`, `*_15_eqsplit_wolff.csv` |
 | Equal-split and concentration counterfactuals | `15_challenge_equal_split_counterfactual.R`, `util_concentration_sweep.R` | `*_15_eqsplit_*`, `hfcs_w50_21_concentration_gradient.csv` |
 | Stratification (Figures 2–4) | `05f_challenge_stratification_consolidated.R` | `*_05f_strat_*` |
 | Temporal robustness | `12_challenge_temporal_x_measures.R` | `hfcs_multiwave/` |
@@ -122,7 +122,7 @@ stated in the paper, the 1,000 HFCS replicate weights. Run times above are for o
   results published and the related observations and analysis may not correspond to results or
   analysis of the data producers. Access: [ECB — HFCS](https://www.ecb.europa.eu/stats/ecb_surveys/hfcs/html/index.en.html).
 - **LWS.** Luxembourg Wealth Study (LWS) Database, <https://www.lisdatacenter.org> (multiple
-  countries; microdata accessed 2026). Luxembourg: LIS.
+  countries; microdata runs completed between July and September 2026). Luxembourg: LIS.
 - **CPI.** World Bank consumer price indices.
 - **Macro inheritance flows.** Hand-collected from the published literature; sources in
   `results/macro/macro_sources_references.md`.

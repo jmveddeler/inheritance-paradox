@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this material, please cite the paper as below."
-title: "Is the inheritance paradox real? Replication package"
+title: "Is the inheritance paradox real? Code and aggregate results"
 authors:
   - family-names: Veddeler
     given-names: Jan-Marten
@@ -11,7 +11,7 @@ version: "0.1-draft"
 date-released: 2026-09-18
 preferred-citation:
   type: unpublished
-  title: "Is the inheritance paradox real? Inequality measure choice, mechanical effects and stratification"
+  title: "Is the inheritance paradox real? Inequality measure choice, capitalisation assumptions and stratification"
   authors:
     - family-names: Veddeler
       given-names: Jan-Marten

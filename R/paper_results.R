@@ -153,6 +153,12 @@ load_paper_results <- function(quiet = FALSE) {
     rho_empirical  = .rd("results/rho_mech/rho_mech_empirical_lws_country_summary.csv"),
     ch15_wolff     = .rd(file.path(L, "lws_15_eqsplit_wolff.csv")),
     ch15_measures  = .rd(file.path(L, "lws_15_eqsplit_measures.csv")),
+    # Country x regime moments behind rho* (p2, CV of each component, observed
+    # correlation), and the HFCS mean-shift split. Added 2026-09-17 for the
+    # reworked mechanism section; read-only additions, no result changes.
+    rho_hfcs       = .rd("results/rho_mech/rho_mech_empirical_hfcs_w50.csv"),
+    rho_lws        = .rd("results/rho_mech/rho_mech_empirical_lws.csv"),
+    ch15_wolff_hfcs = .rd(file.path(H, "hfcs_w50_15_eqsplit_wolff.csv")),
 
     # --- Stratification: the stated primary contribution --------------------
     # LWS source of record is 05f v2; 05/05c/05d are superseded for this.
