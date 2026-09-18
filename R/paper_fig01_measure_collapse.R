@@ -67,12 +67,32 @@ wide <- wide |>
     lab_hi   = ifelse(same, as.character(gradient), as.character(baseline_3pct))
   )
 
+# THE ONE-EURO CONVENTION, added 2026-09-18. The Atkinson and generalised
+# entropy families are undefined on the non-positive wealth the counterfactual
+# creates. Standard implementations drop those households; keeping them at one
+# euro is an equally defensible convention and gives a very different count.
+# Showing both makes the figure say what the section argues: for the
+# bottom-weighted measures the verdict is set by that choice, not by the data.
+bat_raw <- res$ch07_hfcs_raw
+.n_below <- function(stat) {
+  x <- bat_raw$estimate[bat_raw$stat_name == stat]
+  if (!length(x)) NA_integer_ else sum(is.finite(x) & x < 1)
+}
+wide$one_euro <- vapply(as.character(wide$measure),
+                        function(m) .n_below(paste0("gradient_", m, "_bach1_ratio")),
+                        integer(1))
+
 p <- ggplot(wide, aes(y = label)) +
   # Connector first, so the points sit on top of it.
   geom_segment(aes(x = baseline_3pct, xend = gradient, yend = label),
                colour = PAPER_MUTED, linewidth = 1.4, lineend = "round") +
+  geom_segment(aes(x = gradient, xend = one_euro, yend = label),
+               colour = PAPER_ACCENT, linewidth = 0.5, linetype = "22",
+               na.rm = TRUE) +
   geom_point(aes(x = baseline_3pct, colour = "Flat 3% return"), size = 3.4) +
   geom_point(aes(x = gradient,      colour = "Differential gradient"), size = 3.4) +
+  geom_point(aes(x = one_euro, colour = "Gradient, negative wealth kept at €1"),
+             size = 3.4, shape = 21, fill = "white", stroke = 1.1, na.rm = TRUE) +
   # Direct labels outside the marks: identity never depends on colour, and in
   # greyscale the numbers still read.
   geom_text(aes(x = lo, label = lab_lo), colour = PAPER_INK,
@@ -81,21 +101,24 @@ p <- ggplot(wide, aes(y = label)) +
             size = 2.5, hjust = -0.6, na.rm = TRUE) +
   scale_colour_manual(
     values = c("Flat 3% return" = PAPER_LIGHT,
-               "Differential gradient" = PAPER_DARK),
-    breaks = c("Flat 3% return", "Differential gradient")) +
+               "Differential gradient" = PAPER_DARK,
+               "Gradient, negative wealth kept at €1" = PAPER_ACCENT),
+    breaks = c("Flat 3% return", "Differential gradient",
+               "Gradient, negative wealth kept at €1")) +
   scale_x_continuous(limits = c(-1.6, n_countries + 1.6),
                      breaks = seq(0, n_countries, by = 3),
                      expand = expansion(mult = c(0.02, 0.02))) +
   labs(
-    title    = "The paradox depends on the measure and on the capitalisation assumption",
+    title    = "What the paradox depends on: the measure, the return assumption, and a convention",
     subtitle = paste0("Countries showing the paradox (of ", n_countries,
                       "), HFCS Wave 5.0.\n",
-                      "Measures ordered from most top-weighted (top) to most bottom-weighted (bottom)."),
+                      "Measures ordered from those weighting the top (upper rows) to those weighting the bottom (lower rows)."),
     x = paste0("Number of countries where the measure ratio is below 1  (out of ", n_countries, ")"),
     y = NULL,
     caption = paste0(
-      "Top-weighted measures return the identical verdict under both regimes; ",
-      "bottom-weighted measures collapse.\n",
+      "The Gini and the CV give the same verdict under either return assumption.\n",
+      "Lower down, the count turns on how non-positive counterfactual wealth is treated:\n",
+      "dropped (filled marks) or kept at one euro (open marks).\n",
       "Source: own calculations, HFCS UDB 5.0, 18 countries with transfer data.")
   ) +
   theme_paper() +

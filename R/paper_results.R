@@ -159,6 +159,11 @@ load_paper_results <- function(quiet = FALSE) {
     rho_hfcs       = .rd("results/rho_mech/rho_mech_empirical_hfcs_w50.csv"),
     rho_lws        = .rd("results/rho_mech/rho_mech_empirical_lws.csv"),
     ch15_wolff_hfcs = .rd(file.path(H, "hfcs_w50_15_eqsplit_wolff.csv")),
+    # Weighted share of households with negative wealth, observed and
+    # counterfactual (R/util_negative_wealth_share.R).
+    neg_wealth     = .rd(file.path(H, "hfcs_w50_negative_wealth_share.csv")),
+    # Transfers by decile of counterfactual wealth (R/util_wt_by_nwx_decile.R).
+    wt_decile      = .rd(file.path(H, "hfcs_w50_wt_by_nwx_decile.csv")),
 
     # --- Stratification: the stated primary contribution --------------------
     # LWS source of record is 05f v2; 05/05c/05d are superseded for this.
